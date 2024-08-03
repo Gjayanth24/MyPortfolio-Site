@@ -101,19 +101,19 @@ navItems.forEach((navItem) => {
 });
 
 
-// scroll reveal
 // Initialize ScrollReveal with configuration
 ScrollReveal({
-  reset: true,
+  reset: false,  // Set to false to avoid resetting animations
   distance: '60px',
-  duration: 2500,
-  delay: 100
+  duration: 1000,
+  delay: 100,
+  once: true      // Ensure animations occur only once
 });
 
 // Reveal elements with specific settings
 ScrollReveal().reveal('.home .info h2, .section-title-01, .section-title-02', { delay: 500, origin: 'left' });
 
-ScrollReveal().reveal('.home .info h3, .home .info .p, .about-info .btn', { delay: 600, origin: 'right' });
+ScrollReveal().reveal('.home .info h3, .home .info .p, .about-info .btn', { delay: 100, origin: 'right' });
 
 ScrollReveal().reveal('.home .info .btn', { delay: 700, origin: 'bottom' });
 
@@ -134,7 +134,3 @@ ScrollReveal().reveal('.projects-container .project-card', { delay: 100, origin:
 ScrollReveal().reveal('.certifications-container .certification-card', { delay: 100, origin: 'top' });
 
 ScrollReveal().reveal('footer .group', { delay: 500, origin: 'top', interval: 200 });
-
-
-
-
