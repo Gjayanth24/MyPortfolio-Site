@@ -125,7 +125,7 @@ ScrollReveal().reveal('.about .description, .contact-right', { delay: 600, origi
 ScrollReveal().reveal('.education-awards .education', { delay: 600, origin: 'left' });
 ScrollReveal().reveal('.education-awards .awards', { delay: 600, origin: 'right' });
 
-// ScrollReveal().reveal('.skills-container .skills-card', { delay: 600, origin: 'right' });
+ScrollReveal().reveal('.skills-container .skills-card', { delay: 600, origin: 'top' });
 ScrollReveal().reveal('.skills-description h3', { delay: 100, origin: 'left' });
 ScrollReveal().reveal('.skills-description h1', { delay: 100, origin: 'bottom' });
 
