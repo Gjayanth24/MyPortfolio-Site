@@ -134,3 +134,43 @@ ScrollReveal().reveal('.projects-container .project-card', { delay: 100, origin:
 ScrollReveal().reveal('.certifications-container .certification-card', { delay: 100, origin: 'top' });
 
 ScrollReveal().reveal('footer .group', { delay: 500, origin: 'top', interval: 200 });
+
+
+
+
+// =====  Disabling the inspect actions ===========
+
+// Disable right-click context menu
+document.addEventListener('contextmenu', function (event) {
+  event.preventDefault();
+});
+
+// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, and other Developer Tools shortcuts
+document.addEventListener('keydown', function (event) {
+  // F12
+  if (event.keyCode == 123) {
+    event.preventDefault();
+  }
+  // Ctrl+Shift+I or Ctrl+Shift+J or Ctrl+U
+  if ((event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74)) || (event.ctrlKey && event.keyCode == 85)) {
+    event.preventDefault();
+  }
+});
+
+// Disable "View Source" and "Inspect Element" via key shortcuts
+document.addEventListener('keydown', function (event) {
+  if (event.ctrlKey && event.keyCode == 83) { // Disable Ctrl+S (Save Page As)
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.keyCode == 80) { // Disable Ctrl+P (Print)
+    event.preventDefault();
+  }
+});
+
+// Detect if DevTools is opened by looking at its dimensions
+function detectDevTools() {
+  if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+    document.body.innerHTML = "<h1>DevTools is disabled on this site</h1>";
+  }
+}
+setInterval(detectDevTools, 1000);
