@@ -168,9 +168,9 @@ document.addEventListener('keydown', function (event) {
 });
 
 // Detect if DevTools is opened by looking at its dimensions
-function detectDevTools() {
-  if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
-    document.body.innerHTML = "<h1>DevTools is disabled on this site</h1>";
-  }
-}
-setInterval(detectDevTools, 1000);
+// function detectDevTools() {
+//   if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+//     document.body.innerHTML = "<h1>DevTools is disabled on this site</h1>";
+//   }
+// }
+// setInterval(detectDevTools, 1000);
